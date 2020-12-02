@@ -1,0 +1,125 @@
+<html>
+<head>
+<style>
+body {
+  background-image: url('rain.gif');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+}
+
+
+audio
+{
+position: absolute;
+    top: 200%;
+   left: 50%;
+   transform: translateX(-50%);
+}
+.mycursor {
+cursor: url("umbrellacurse.png"), auto;
+}
+
+.eyes {
+    display: flex;
+    left: 65%;
+    align-items: right;
+
+}
+
+.eye {
+    width: 79.7px;
+    height: 68px;
+    border-radius: 50%;
+    float: left;
+    margin: 100px;
+    text-align: center;
+}
+
+.ball {
+    background: url(minion-eye.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 92.3px;
+    height: 92.3px;
+    border-radius: 10%;
+}
+
+
+
+.eyeh {
+  position: fixed;
+  left: 5%;
+  width: 200px;
+}
+
+.umbrella{
+    margin: 0;
+    position: absolute;
+    left: 10%;
+    transform: translate(-50%, 5%);
+    top: 420px;
+    -webkit-transition: 10s;
+    -moz-transition: top 5s;
+  -o-transition: top 5s;
+
+}
+
+.umbrella:hover{
+  left: 90%;
+  -webkit-transition: 10s;
+  -moz-transition: top 5s;
+  -o-transition: top 5s;
+}
+.one {
+  position: fixed;
+  left: 25%;
+  top: 80%;
+  width: 300px;
+}
+
+.two {
+  position: fixed;
+  left: 45%;
+  top: 30%;
+  width: 50px;
+}
+</style>
+</head>
+
+<body class="mycursor">
+  <div class="eyeh"> <img src="eye.jpg"; alt="eyeholder"> </div>
+  <div class="body">
+    <div class="eyes">
+          <div class="eye">
+              <div class="ball"></div>
+      </div>
+        </div>
+      <script>
+          var ball = document.getElementsByClassName("ball");
+          document.onmousemove = function() {
+              var x = event.clientX * 50 / window.innerWidth + "%";
+              var y = event.clientY * 50 / window.innerHeight + "%";
+
+              for (var i = 0; i < 2; i++) {
+                  ball[i].style.left = x / 2;
+                  ball[i].style.top = y / 2;
+                  ball[i].style.transform = "translate(" + x + "," + y + ")";
+              }
+          }
+      </script>
+
+<div class="umbrella"><img src="umbrella.png" width="600" height="400" alt="umbrella"> </div>
+<audio src="rain.mp3" loop controls autoplay>
+audio is not supported.
+</audio>
+<a href="blood.html">
+  <div class="one"><img src="charger.png" width="60" height="65" alt="flower vase"> </div>
+</a>
+
+<a href="index.html">
+  <div class="two"><img src="flowervase.png" width="50" height="60" alt="keyhole"> </div>
+</a>
+</body>
+
+</html>
